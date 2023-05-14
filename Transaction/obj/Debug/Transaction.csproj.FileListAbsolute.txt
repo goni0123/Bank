@@ -1,0 +1,16 @@
+C:\Users\Goni_\Desktop\Transaction\bin\Debug\Transaction.exe.config
+C:\Users\Goni_\Desktop\Transaction\bin\Debug\Transaction.exe
+C:\Users\Goni_\Desktop\Transaction\bin\Debug\Transaction.pdb
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.csproj.AssemblyReference.cache
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.csproj.SuggestedBindingRedirects.cache
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\MainWindow.g.cs
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\App.g.cs
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction_MarkupCompile.cache
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction_MarkupCompile.lref
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\MainWindow.baml
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.g.resources
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.Properties.Resources.resources
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.csproj.GenerateResource.cache
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.csproj.CoreCompileInputs.cache
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.exe
+C:\Users\Goni_\Desktop\Transaction\obj\Debug\Transaction.pdb
