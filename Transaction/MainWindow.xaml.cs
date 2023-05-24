@@ -31,7 +31,6 @@ namespace Transaction
                 }
             }
         }
-
         private void Send_Click(object sender, RoutedEventArgs e)
         {
             string senderAccount = Sender.Text;
