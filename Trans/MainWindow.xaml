@@ -1,0 +1,28 @@
+﻿<Window x:Class="Trans.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trans"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="senderName" HorizontalAlignment="Left" Margin="194,102,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Sender" HorizontalAlignment="Left" Margin="142,100,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="reciverName" HorizontalAlignment="Left" Margin="417,102,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Reciver" HorizontalAlignment="Left" Margin="365,100,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="sendAmount" HorizontalAlignment="Left" Margin="293,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="120"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="240,151,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SendMoney" Content="Send Money" HorizontalAlignment="Left" Margin="437,154,0,0" VerticalAlignment="Top" Click="SendMoney_Click"/>
+        <DataGrid x:Name="Transactions" Margin="135,217,158,43" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sender" Binding="{Binding Sender}" Width="100"/>
+                <DataGridTextColumn Header="Reciver" Binding="{Binding Receiver}" Width="150"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="150"/>
+                <DataGridTextColumn Header="Fee" Binding="{Binding Fee}" Width="100"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding TransactionDate}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
