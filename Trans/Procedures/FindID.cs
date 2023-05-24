@@ -33,7 +33,6 @@ namespace Trans.Procedures
                     reader.Close();
                 }
             }
-
             return AccountId;
         }
 

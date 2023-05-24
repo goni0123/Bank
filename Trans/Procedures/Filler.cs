@@ -19,7 +19,7 @@ namespace Trans.Procedures
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT TransactionId,Sender,Receiver,Amount,Fee,TransactionDate FROM Transactions ORDER BY TransactionId DESC", con))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM Transactions ORDER BY TransactionId DESC", con))
                     {
                         SqlDataAdapter sda = new SqlDataAdapter(command);
                         DataTable dt = new DataTable("Nalog");

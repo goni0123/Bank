@@ -35,6 +35,10 @@ namespace Trans.Procedures
             {
                 throw new Exception("Insufficient funds in the sender's account.");
             }
+            else if(senderAccountId == receiverAccountId)
+            {
+                throw new Exception("Funds Cannot be send to the same account.");
+            }
 
             decimal discount = GetDiscount(connectionString, senderAccountId);
 
@@ -46,18 +50,12 @@ namespace Trans.Procedures
                 {
                     try
                     {
-                        // Deduct the amount from the sender account
                         DeductAmountFromAccount(connection, transaction, senderAccountId, amount, fee, discount);
-
-                        // Add the amount to the receiver account
                         AddAmountToAccount(connection, transaction, receiverAccountId, amount);
-
-                        // Commit the transaction
                         transaction.Commit();
                     }
                     catch (Exception ex)
                     {
-                        // An error occurred, rollback the transaction
                         transaction.Rollback();
                         throw ex;
                     }

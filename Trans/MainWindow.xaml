@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trans"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
-        <ComboBox x:Name="senderName" HorizontalAlignment="Left" Margin="194,102,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Sender" HorizontalAlignment="Left" Margin="142,100,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="reciverName" HorizontalAlignment="Left" Margin="417,102,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Reciver" HorizontalAlignment="Left" Margin="365,100,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="sendAmount" HorizontalAlignment="Left" Margin="293,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="120"/>
-        <Label Content="Amount" HorizontalAlignment="Left" Margin="240,151,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="SendMoney" Content="Send Money" HorizontalAlignment="Left" Margin="437,154,0,0" VerticalAlignment="Top" Click="SendMoney_Click"/>
-        <DataGrid x:Name="Transactions" Margin="135,217,158,43" AutoGenerateColumns="False">
+        <ComboBox x:Name="senderName" HorizontalAlignment="Left" Margin="339,65,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Sender" HorizontalAlignment="Left" Margin="287,63,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="reciverName" HorizontalAlignment="Left" Margin="562,65,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Reciver" HorizontalAlignment="Left" Margin="510,63,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="sendAmount" HorizontalAlignment="Left" Margin="438,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="120"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="385,114,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SendMoney" Content="Send Money" HorizontalAlignment="Left" Margin="582,117,0,0" VerticalAlignment="Top" Click="SendMoney_Click"/>
+        <DataGrid x:Name="Transactions" Margin="170,195,174,65" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Sender" Binding="{Binding Sender}" Width="100"/>
                 <DataGridTextColumn Header="Reciver" Binding="{Binding Receiver}" Width="150"/>
