@@ -29,22 +29,37 @@ namespace Trans
 
         private void SendMoney_Click(object sender, RoutedEventArgs e)
         {
-            InsertTransaction insertTransaction = new InsertTransaction();
-            FindID findId = new FindID();
-            SaveCommits saveCommits = new SaveCommits();
-            decimal feeprice = 30;
-            string SenderName = senderName.Text;
-            string ReciverName= reciverName.Text;
-            int senderAccountId = findId.GetAccountIdByName(connectionString, SenderName);
-            int receiverAccountId = findId.GetAccountIdByName(connectionString, ReciverName);
-            string sendamount = sendAmount.Text;
-            decimal amount = decimal.Parse(sendamount);
-            decimal discount = saveCommits.GetDiscount(connectionString, senderAccountId);
-            decimal fee= feeprice-discount;
-            saveCommits.ExecuteTransaction(connectionString, senderAccountId, receiverAccountId, amount, feeprice);
-            insertTransaction.InsertTrans(connectionString,senderAccountId, receiverAccountId, amount, fee);
+            using (TransactionScope scope = new TransactionScope())
+            {
+                try
+                {
+                    InsertTransaction insertTransaction = new InsertTransaction();
+                    FindID findId = new FindID();
+                    SaveCommits saveCommits = new SaveCommits();
+
+                    decimal feeprice = 30;
+                    string SenderName = senderName.Text;
+                    string ReciverName = reciverName.Text;
+                    int senderAccountId = findId.GetAccountIdByName(connectionString, SenderName);
+                    int receiverAccountId = findId.GetAccountIdByName(connectionString, ReciverName);
+                    string sendamount = sendAmount.Text;
+                    decimal amount = decimal.Parse(sendamount);
+                    decimal discount = saveCommits.GetDiscount(connectionString, senderAccountId);
+                    decimal fee = feeprice - discount;
+
+                    saveCommits.ExecuteTransaction(connectionString, senderAccountId, receiverAccountId, amount, feeprice);
+                    insertTransaction.InsertTrans(connectionString, senderAccountId, receiverAccountId, amount, fee);
+                    scope.Complete();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
             Filler filler = new Filler();
             filler.LoadDataGrid(connectionString, Transactions);
+
         }
     }
 }
