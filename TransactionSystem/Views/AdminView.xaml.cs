@@ -24,5 +24,37 @@ namespace TransactionSystem.Views
         {
             InitializeComponent();
         }
+        private void AddUsers_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void DeleteUsers_Click(Object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void UpdateUsers_Click(Object sender,RoutedEventArgs e)
+        {
+
+        }
+        private void DisplayTransactions_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void UpdateBalance_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void AddBills_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void DeleteBills_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void UpdateBills_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

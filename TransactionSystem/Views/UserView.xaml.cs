@@ -1,4 +1,4 @@
-﻿using System.Windows;
+﻿using System;
 using System.Windows.Controls;
 
 namespace TransactionSystem.Views
@@ -7,12 +7,10 @@ namespace TransactionSystem.Views
     {
         public int UserId { get; set; }
 
-        public UserView()
+        public UserView(int userId)
         {
             InitializeComponent();
-
-            MainView mainView = Window.GetWindow(this) as MainView;
-            UserId = mainView.AuthenticatedUserId;
+            UserId = userId;
         }
     }
 }

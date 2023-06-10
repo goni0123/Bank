@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Goni_\Desktop\TransactionSystem\obj\Debug\
+C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\
 TransactionSystem
 none
 false
 DEBUG;TRACE
-C:\Users\Goni_\Desktop\TransactionSystem\App.xaml
+C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\App.xaml
 5-340083121
 
-11-528448840
+13-2048570650
 14-1486485296
 Views\AdminView.xaml;Views\LoginView.xaml;Views\MainView.xaml;Views\SignupView.xaml;Views\UserView.xaml;
 
-True
+False
 

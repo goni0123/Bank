@@ -2,7 +2,6 @@
 using System.Windows;
 using System.Windows.Controls;
 using TransactionSystem.ViewModels;
-using TransactionSystem.Views;
 
 namespace TransactionSystem.Views
 {
@@ -14,6 +13,13 @@ namespace TransactionSystem.Views
         public MainView()
         {
             InitializeComponent();
+
+            // Show the LoginView initially
+            ShowLoginView();
+        }
+
+        private void ShowLoginView()
+        {
             LoginView loginView = new LoginView();
             loginView.Authenticated += LoginView_Authenticated;
             ActionView.Content = loginView;
@@ -24,17 +30,29 @@ namespace TransactionSystem.Views
             AuthenticatedUserId = userId;
             AuthenticatedUserRole = role;
 
-            if (role == "admin")
+            if (role == "Admin")
             {
-                AdminView adminView = new AdminView();
-                ActionView.Content = adminView;
+                ShowAdminView();
             }
-            else if (role == "user")
+            else if (role == "User")
             {
-                UserView userView = new UserView();
-                userView.UserId = userId;
-                ActionView.Content = userView;
+                ShowUserView();
             }
+            else
+            {
+                MessageBox.Show("Invalid role!");
+            }
+        }
+
+        private void ShowAdminView()
+        {
+            AdminView adminView = new AdminView();
+            ActionView.Content = adminView;
+        }
+        private void ShowUserView()
+        {
+            UserView userView = new UserView(AuthenticatedUserId);
+            ActionView.Content = userView;
         }
     }
 }

@@ -28,17 +28,23 @@ namespace TransactionSystem.Views
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            MainView mainView = new MainView();
             SignupViewModel signupView = new SignupViewModel();
             string username = UserName.Text;
             string password = Password.Password;
             string role = Role.Text;
 
-            signupView.CreateUser(username, password, role);
+            bool isUserCreated = signupView.CreateUser(username, password, role);
 
-            LoginView loginView = new LoginView();
-            mainView.ActionView.Content = loginView;
+            if (isUserCreated)
+            {
+                MainView mainView = Window.GetWindow(this) as MainView;
+                LoginView loginView = new LoginView();
+                mainView.ActionView.Content = loginView;
+            }
+            else
+            {
+                MessageBox.Show("Username is already taken");
+            }
         }
-
     }
 }

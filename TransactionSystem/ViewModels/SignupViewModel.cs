@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TransactionSystem.ViewModels
 {
@@ -34,9 +31,14 @@ namespace TransactionSystem.ViewModels
 
             return string.Equals(hashedPassword, encryptedPassword);
         }
-
-        public void CreateUser(string username, string password, string role)
+        public bool CreateUser(string username, string password, string role)
         {
+            bool userExists = CheckUserExists(username);
+            if (userExists)
+            {
+                return false;
+            }
+
             byte[] salt = GenerateSalt();
             byte[] hashedPassword = HashPassword(password, salt);
 
@@ -52,7 +54,27 @@ namespace TransactionSystem.ViewModels
                     command.Parameters.AddWithValue("@Password", Convert.ToBase64String(hashedPassword));
                     command.Parameters.AddWithValue("@Salt", salt);
                     command.Parameters.AddWithValue("@Role", role);
-                    command.ExecuteNonQuery();
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
+                }
+            }
+        }
+
+        private bool CheckUserExists(string username)
+        {
+            string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+
+                    return count > 0;
                 }
             }
         }

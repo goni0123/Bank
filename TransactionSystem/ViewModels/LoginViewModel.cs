@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using TransactionSystem.Views;
 
 namespace TransactionSystem.ViewModels
 {

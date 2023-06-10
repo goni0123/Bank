@@ -9,23 +9,24 @@
     <Grid>
         <Menu VerticalAlignment="Top" >
             <MenuItem Header="Users">
-                <MenuItem Header="Add"></MenuItem>
-                <MenuItem Header="Delete"></MenuItem>
-                <MenuItem Header="Update"></MenuItem>
+                <MenuItem Header="Add" Click="AddUsers_Click"></MenuItem>
+                <MenuItem Header="Delete" Click="DeleteUsers_Click"></MenuItem>
+                <MenuItem Header="Update" Click="UpdateUsers_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="Bills">
-                <MenuItem Header="Add"></MenuItem>
-                <MenuItem Header="Delete"></MenuItem>
-                <MenuItem Header="Update"></MenuItem>
+                <MenuItem Header="Add" Click="AddBills_Click"></MenuItem>
+                <MenuItem Header="Delete" Click="DeleteBills_Click"></MenuItem>
+                <MenuItem Header="Update" Click="UpdateBills_Click"></MenuItem> 
             </MenuItem>
             <MenuItem Header="Transactions">
-                <MenuItem Header="Add"></MenuItem>
-                <MenuItem Header="Delete"></MenuItem>
-                <MenuItem Header="Update"></MenuItem>
+                <MenuItem Header="Display" Click="DisplayTransactions_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="Balance">
-                <MenuItem Header="Update"></MenuItem>
+                <MenuItem Header="Update" Click="UpdateBalance_Click"></MenuItem>
             </MenuItem>
         </Menu>
+        <Grid>
+            <ContentControl x:Name="AdminAction" Margin="0,20,0,0"/>
+        </Grid>
     </Grid>
 </UserControl>
