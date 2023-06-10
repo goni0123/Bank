@@ -26,7 +26,9 @@ namespace TransactionSystem.Views
         }
         private void AddUsers_Click(object sender, RoutedEventArgs e)
         {
-
+            AddUserView addUserView = new AddUserView();
+            MainView mainView = Window.GetWindow(this) as MainView;
+            mainView.ActionView.Content = addUserView;
         }
         private void DeleteUsers_Click(Object sender, RoutedEventArgs e)
         {

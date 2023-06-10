@@ -46,5 +46,12 @@ namespace TransactionSystem.Views
                 MessageBox.Show("Username is already taken");
             }
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MainView mainView = Window.GetWindow(this) as MainView;
+            LoginView loginView = new LoginView();
+            mainView.ActionView.Content = loginView;
+        }
     }
 }

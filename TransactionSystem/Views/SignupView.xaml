@@ -19,5 +19,6 @@
             </ComboBoxItem>
         </ComboBox>
         <Button x:Name="SignUp" Background="Bisque" Content="Sign Up" FontSize="20" Width="80" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,300,0,0" Click="SignUp_Click"/>
+        <Button x:Name="Back" Background="Bisque" Content="Back" FontSize="20" Height="35" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Click="Back_Click"/>
     </Grid>
 </UserControl>
