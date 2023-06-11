@@ -21,31 +21,36 @@ namespace TransactionSystem.Views
         {
             InitializeComponent();
         }
-        private void UserClick (object sender, RoutedEventArgs e)
+        private void UserClick(object sender, RoutedEventArgs e)
         {
             AdminUserView adminUserView = new AdminUserView();
             AdminAction.Content = adminUserView;
         }
+
         private void TransactionClick(object sender, RoutedEventArgs e)
         {
             AdminTransView transView = new AdminTransView();
-            AdminAction.Content= transView;
+            AdminAction.Content = transView;
         }
+
         private void BillClick(object sender, RoutedEventArgs e)
         {
             AdminBillView billView = new AdminBillView();
-            AdminAction.Content= billView;
+            AdminAction.Content = billView;
         }
+
         private void BalanceClick(object sender, RoutedEventArgs e)
         {
             AdminBalanceView balanceView = new AdminBalanceView();
             AdminAction.Content = balanceView;
         }
+
+        public event EventHandler LogoutRequested;
+
         private void LogOutClick(object sender, RoutedEventArgs e)
         {
-            LoginView loginView = new LoginView();
-            MainView mainView = Window.GetWindow(this) as MainView;
-            mainView.ActionView.Content = loginView;
+            LogoutRequested?.Invoke(this, EventArgs.Empty);
         }
+
     }
 }

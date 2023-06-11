@@ -7,18 +7,16 @@ namespace TransactionSystem.Views
 {
     public partial class MainView : Window
     {
-        public int AuthenticatedUserId { get; private set; }
-        public string AuthenticatedUserRole { get; private set; }
+        public int AuthenticatedUserId { get;  set; }
+        public string AuthenticatedUserRole { get;  set; }
 
         public MainView()
         {
             InitializeComponent();
-
-            // Show the LoginView initially
             ShowLoginView();
         }
 
-        private void ShowLoginView()
+        public void ShowLoginView()
         {
             LoginView loginView = new LoginView();
             loginView.Authenticated += LoginView_Authenticated;
@@ -44,15 +42,34 @@ namespace TransactionSystem.Views
             }
         }
 
-        private void ShowAdminView()
-        {
-            AdminView adminView = new AdminView();
-            ActionView.Content = adminView;
-        }
         private void ShowUserView()
         {
             UserView userView = new UserView(AuthenticatedUserId);
+            userView.LogoutRequested += UserView_LogoutRequested;
             ActionView.Content = userView;
         }
+
+        private void UserView_LogoutRequested(object sender, EventArgs e)
+        {
+            // Perform logout actions
+            AuthenticatedUserId = 0;
+            AuthenticatedUserRole = null;
+            ShowLoginView();
+        }
+        private void ShowAdminView()
+        {
+            AdminView adminView = new AdminView();
+            adminView.LogoutRequested += AdminView_LogoutRequested;
+            ActionView.Content = adminView;
+        }
+
+        private void AdminView_LogoutRequested(object sender, EventArgs e)
+        {
+            // Perform logout actions
+            AuthenticatedUserId = 0;
+            AuthenticatedUserRole = null;
+            ShowLoginView();
+        }
+
     }
 }

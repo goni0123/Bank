@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+using System.Transactions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using TransactionSystem.ViewModels;
+using static TransactionSystem.ViewModels.UserSendViewModel;
 
 namespace TransactionSystem.Views
 {
@@ -20,16 +14,42 @@ namespace TransactionSystem.Views
     /// </summary>
     public partial class UserSendView : UserControl
     {
-        private int userId;
-
-        public UserSendView()
-        {
+        public int userId;
+        private string connectionString;
+        public UserSendView(int userId)
+        {   
+            this.userId = userId;
+            UserSendViewModel userSendViewModel = new UserSendViewModel();
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+            userSendViewModel.LoadDataGrid(connectionString, Trans,userId);
+            userSendViewModel.LoadComboBox(connectionString, ToUser, "Username", "Users");
         }
 
-        public UserSendView(int userId)
+        private void SendMony_Click(object sender, RoutedEventArgs e)
         {
-            this.userId = userId;
+            UserSendViewModel userSendViewModel = new UserSendViewModel();
+            using (TransactionScope scope = new TransactionScope())
+            {
+                try
+                {
+                    decimal feeprice = 30;
+                    string ReciverName = ToUser.Text;
+                    int receiverAccountId = userSendViewModel.GetAccountIdByName(connectionString, ReciverName);
+                    string sendamount = Amount.Text;
+                    decimal amount = decimal.Parse(sendamount);
+                    decimal discount = userSendViewModel.GetDiscount(connectionString, userId);
+                    decimal fee = feeprice - discount;
+                    userSendViewModel.ExecuteTransaction(connectionString, userId, receiverAccountId, amount, feeprice);
+                    userSendViewModel.InsertTrans(connectionString, userId, receiverAccountId, amount, fee);
+                    scope.Complete();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                userSendViewModel.LoadDataGrid(connectionString, Trans,userId);
+            }
         }
     }
 }

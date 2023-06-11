@@ -1,12 +1,13 @@
--- Create the Users table
+-- Create database transactionss
+--use transactionss
 CREATE TABLE Users
 (
     Id INT PRIMARY KEY IDENTITY(1,1),
     Username NVARCHAR(50) NOT NULL,
     Password NVARCHAR(100) NOT NULL,
     Salt VARBINARY(16) NOT NULL,
-    Balance DECIMAL(18,2) DEFAULT (200),
-    Transaction_count INT,
+    Balance DECIMAL(18,2) DEFAULT (500),
+    Transaction_count INT DEFAULT (0),
     Discount FLOAT DEFAULT (0),
     Role NVARCHAR(50) NOT NULL DEFAULT ('User')
 );

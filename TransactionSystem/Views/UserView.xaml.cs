@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace TransactionSystem.Views
 {
@@ -13,33 +14,31 @@ namespace TransactionSystem.Views
             InitializeComponent();
             UserId = userId;
         }
+        public event EventHandler LogoutRequested;
 
-        private void SignOutClick(object sender,System.Windows.RoutedEventArgs e)
+        private void SignOutClick(object sender, RoutedEventArgs e)
         {
-            LoginView loginView = new LoginView();
-            MainView mainView = Window.GetWindow(this) as MainView;
-            mainView.ActionView.Content = loginView;
+            LogoutRequested?.Invoke(this, EventArgs.Empty);
         }
-
-        private void SendClick(object sender, System.Windows.RoutedEventArgs e)
+        private void SendClick(object sender, RoutedEventArgs e)
         {
             UserSendView userSendView = new UserSendView(UserId);
             ActionUser.Content = userSendView;
         }
 
-        private void TransClick(object sender, System.Windows.RoutedEventArgs e)
+        private void TransClick(object sender, RoutedEventArgs e)
         {
             UserTransView userTransView = new UserTransView(UserId);
             ActionUser.Content = userTransView;
         }
 
-        private void BalanceClick(object sender, System.Windows.RoutedEventArgs e)
+        private void BalanceClick(object sender, RoutedEventArgs e)
         {
             UserBalanceView userBalanceView = new UserBalanceView(UserId);
-            ActionUser.Content= userBalanceView;
+            ActionUser.Content = userBalanceView;
         }
 
-        private void BillClick(object sender, System.Windows.RoutedEventArgs e)
+        private void BillClick(object sender, RoutedEventArgs e)
         {
             UserBillView userBillView = new UserBillView(UserId);
             ActionUser.Content = userBillView;

@@ -11,14 +11,14 @@
         <ComboBox x:Name="ToUser" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" HorizontalAlignment="Center" Margin="0,100,120,0"/>
         <TextBlock Text="Amount" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Center" Margin="0,150,310,0"/>
         <TextBox x:Name="Amount" VerticalAlignment="Top" Height="30" Width="100" FontSize="20" HorizontalAlignment="Center" Margin="0,150,120,0"/>
-        <Button x:Name="SendMony" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send Money" FontSize="15" Margin="100,155,0,0"/>
-        <DataGrid x:Name="Transactions" Margin="170,195,174,65" AutoGenerateColumns="False">
+        <Button x:Name="SendMony" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Send Money" FontSize="15" Margin="100,155,0,0" Click="SendMony_Click"/>
+        <DataGrid x:Name="Trans" Margin="100,195,80,65" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Sender" Binding="{Binding Sender}" Width="100"/>
-                <DataGridTextColumn Header="Reciver" Binding="{Binding Receiver}" Width="150"/>
+                <DataGridTextColumn Header="Receiver" Binding="{Binding Receiver}" Width="150"/>
                 <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="150"/>
                 <DataGridTextColumn Header="Fee" Binding="{Binding Fee}" Width="100"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding TransactionDate}" Width="100"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding TransactionDate }" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
 
