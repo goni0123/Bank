@@ -15,48 +15,37 @@ using System.Windows.Shapes;
 
 namespace TransactionSystem.Views
 {
-    /// <summary>
-    /// Interaction logic for AdminView.xaml
-    /// </summary>
     public partial class AdminView : UserControl
     {
         public AdminView()
         {
             InitializeComponent();
         }
-        private void AddUsers_Click(object sender, RoutedEventArgs e)
+        private void UserClick (object sender, RoutedEventArgs e)
         {
-            AddUserView addUserView = new AddUserView();
+            AdminUserView adminUserView = new AdminUserView();
+            AdminAction.Content = adminUserView;
+        }
+        private void TransactionClick(object sender, RoutedEventArgs e)
+        {
+            AdminTransView transView = new AdminTransView();
+            AdminAction.Content= transView;
+        }
+        private void BillClick(object sender, RoutedEventArgs e)
+        {
+            AdminBillView billView = new AdminBillView();
+            AdminAction.Content= billView;
+        }
+        private void BalanceClick(object sender, RoutedEventArgs e)
+        {
+            AdminBalanceView balanceView = new AdminBalanceView();
+            AdminAction.Content = balanceView;
+        }
+        private void LogOutClick(object sender, RoutedEventArgs e)
+        {
+            LoginView loginView = new LoginView();
             MainView mainView = Window.GetWindow(this) as MainView;
-            mainView.ActionView.Content = addUserView;
-        }
-        private void DeleteUsers_Click(Object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void UpdateUsers_Click(Object sender,RoutedEventArgs e)
-        {
-
-        }
-        private void DisplayTransactions_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void UpdateBalance_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void AddBills_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void DeleteBills_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void UpdateBills_Click(object sender, RoutedEventArgs e)
-        {
-
+            mainView.ActionView.Content = loginView;
         }
     }
 }

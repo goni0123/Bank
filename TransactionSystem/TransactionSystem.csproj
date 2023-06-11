@@ -64,8 +64,17 @@
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\SignupViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
-    <Compile Include="Views\AddUserView.xaml.cs">
-      <DependentUpon>AddUserView.xaml</DependentUpon>
+    <Compile Include="Views\AdminBalanceView.xaml.cs">
+      <DependentUpon>AdminBalanceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminBillView.xaml.cs">
+      <DependentUpon>AdminBillView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTransView.xaml.cs">
+      <DependentUpon>AdminTransView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminUserView.xaml.cs">
+      <DependentUpon>AdminUserView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminView.xaml.cs">
       <DependentUpon>AdminView.xaml</DependentUpon>
@@ -78,6 +87,18 @@
     </Compile>
     <Compile Include="Views\SignupView.xaml.cs">
       <DependentUpon>SignupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserBalanceView.xaml.cs">
+      <DependentUpon>UserBalanceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserBillView.xaml.cs">
+      <DependentUpon>UserBillView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserSendView.xaml.cs">
+      <DependentUpon>UserSendView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserTransView.xaml.cs">
+      <DependentUpon>UserTransView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserView.xaml.cs">
       <DependentUpon>UserView.xaml</DependentUpon>
@@ -110,7 +131,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\AddUserView.xaml">
+    <Page Include="Views\AdminBalanceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminBillView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTransView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminUserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,6 +160,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SignupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserBalanceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserBillView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserSendView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserTransView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

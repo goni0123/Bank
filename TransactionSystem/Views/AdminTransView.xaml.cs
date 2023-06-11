@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace TransactionSystem.Views
 {
     /// <summary>
-    /// Interaction logic for AddUserView.xaml
+    /// Interaction logic for AdminTransView.xaml
     /// </summary>
-    public partial class AddUserView : UserControl
+    public partial class AdminTransView : UserControl
     {
-        public AddUserView()
+        public AdminTransView()
         {
             InitializeComponent();
-        }
-
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Register_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

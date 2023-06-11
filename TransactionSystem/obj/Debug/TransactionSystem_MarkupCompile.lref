@@ -5,5 +5,12 @@ FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\LoginView
 FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\MainView.xaml;;
 FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\SignupView.xaml;;
 FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\UserView.xaml;;
-FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\AddUserView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\UserBalanceView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\UserBillView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\UserSendView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\UserTransView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\AdminBalanceView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\AdminBillView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\AdminTransView.xaml;;
+FC:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\Views\AdminUserView.xaml;;
 
