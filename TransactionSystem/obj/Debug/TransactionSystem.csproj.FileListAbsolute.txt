@@ -49,11 +49,9 @@ C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Transa
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserBalanceView.g.cs
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserBillView.g.cs
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserSendView.g.cs
-C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserTransView.g.cs
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserBalanceView.baml
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserBillView.baml
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserSendView.baml
-C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\UserTransView.baml
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\AdminBalanceView.g.cs
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\AdminBillView.g.cs
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\obj\Debug\Views\AdminTransView.g.cs

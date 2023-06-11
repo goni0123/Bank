@@ -26,12 +26,6 @@ namespace TransactionSystem.Views
             ActionUser.Content = userSendView;
         }
 
-        private void TransClick(object sender, RoutedEventArgs e)
-        {
-            UserTransView userTransView = new UserTransView(UserId);
-            ActionUser.Content = userTransView;
-        }
-
         private void BalanceClick(object sender, RoutedEventArgs e)
         {
             UserBalanceView userBalanceView = new UserBalanceView(UserId);

@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Balance"/>
+        <TextBlock Text="Balance" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,500,100"/>
+        <TextBox x:Name="Balance" Height="30" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,350,100"/>
     </Grid>
 </UserControl>

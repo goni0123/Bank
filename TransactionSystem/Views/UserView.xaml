@@ -9,7 +9,6 @@
     <Grid>
         <Menu VerticalAlignment="Top" >
             <MenuItem Header="Send Money" Click="SendClick"/>
-            <MenuItem Header="Transactions" Click="TransClick"/>
             <MenuItem Header="Check Balance" Click="BalanceClick"/>
             <MenuItem Header="Bills" Click="BillClick"/>
             <MenuItem Header="Sign Out" Click="SignOutClick"/>

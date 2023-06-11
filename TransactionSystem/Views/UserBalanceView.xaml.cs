@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TransactionSystem.ViewModels;
 
 namespace TransactionSystem.Views
 {
@@ -21,15 +23,17 @@ namespace TransactionSystem.Views
     public partial class UserBalanceView : UserControl
     {
         private int userId;
-
-        public UserBalanceView()
-        {
-            InitializeComponent();
-        }
+        private string connectionString;
 
         public UserBalanceView(int userId)
         {
             this.userId = userId;
+            InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+            UserBalanceViewModel userBalanceViewModel = new UserBalanceViewModel();
+            decimal balance=userBalanceViewModel.Balance(connectionString, userId);
+            Balance.Text = balance.ToString();
         }
+
     }
 }

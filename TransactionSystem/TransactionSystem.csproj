@@ -61,8 +61,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\Bill.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\SignupViewModel.cs" />
+    <Compile Include="ViewModels\UserBalanceViewModel.cs" />
+    <Compile Include="ViewModels\UserBillViewModel.cs" />
     <Compile Include="ViewModels\UserSendViewModel.cs" />
     <Compile Include="Views\AdminBalanceView.xaml.cs">
       <DependentUpon>AdminBalanceView.xaml</DependentUpon>
@@ -96,9 +99,6 @@
     </Compile>
     <Compile Include="Views\UserSendView.xaml.cs">
       <DependentUpon>UserSendView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserTransView.xaml.cs">
-      <DependentUpon>UserTransView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserView.xaml.cs">
       <DependentUpon>UserView.xaml</DependentUpon>
@@ -172,10 +172,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserSendView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\UserTransView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
