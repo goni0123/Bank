@@ -61,9 +61,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\AdminBalanceViewModel.cs" />
     <Compile Include="ViewModels\Bill.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\SignupViewModel.cs" />
+    <Compile Include="ViewModels\UserBalance.cs" />
     <Compile Include="ViewModels\UserBalanceViewModel.cs" />
     <Compile Include="ViewModels\UserBillViewModel.cs" />
     <Compile Include="ViewModels\UserSendViewModel.cs" />
