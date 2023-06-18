@@ -7,6 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <TextBlock Text="Username" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="44,30,0,0"/>
+        <TextBox x:Name="User" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="124,30,0,0"/>
+        <TextBlock Text="Amount" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="351,60,0,0"/>
+        <TextBox x:Name="Amount" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="431,60,0,0"/>
+        <TextBlock Text="Bill Name" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="351,90,0,0"/>
+        <TextBox x:Name="BillName" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="431,90,0,0"/>
+        <Button Content="Add" x:Name="AddBill" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="540,30,0,0" Click="AddBill_Click"/>
+        <Button Content="Update" x:Name="UpdateBill" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="540,60,0,0" Click="UpdateBill_Click"/>
+        <Button Content="Delete" x:Name="DeleteBill" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="540,90,0,0" Click="DeleteBill_Click"/>
+        <DataGrid x:Name="BillsD" Height="200" AutoGenerateColumns="False" Margin="124,125,160,125">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill Id" Binding="{Binding BillId}"/>
+                <DataGridTextColumn Header="Username" Binding="{Binding Username}"/>
+                <DataGridTextColumn Header="Bill Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}"/>
+                <DataGridCheckBoxColumn Header="Status" Binding="{Binding Status}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Search" x:Name="Search" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="229,30,0,0" Click="Search_Click"/>
+        <TextBlock Text="Bill id" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="351,30,0,0"/>
+        <TextBox x:Name="BillId" Height="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="431,30,0,0"/>
     </Grid>
 </UserControl>

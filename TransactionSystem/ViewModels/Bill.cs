@@ -1,6 +1,6 @@
-﻿using System;
+﻿using TransactionSystem.ViewModels;
 
-namespace TransactionSystem.ViewModels
+namespace TransactionSystem.Models
 {
     public class Bill
     {
@@ -9,7 +9,7 @@ namespace TransactionSystem.ViewModels
         public decimal Amount { get; set; }
         public bool Status { get; set; }
 
-        public Bill(int billId, string name, decimal amount, bool status)
+        public  Bill(int billId, string name, decimal amount, bool status)
         {
             BillId = billId;
             Name = name;

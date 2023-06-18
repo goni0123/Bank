@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Transactions;
+using TransactionSystem.Models;
 
 namespace TransactionSystem.ViewModels
 {
@@ -15,7 +16,7 @@ namespace TransactionSystem.ViewModels
             Bills = new List<Bill>();
         }
 
-        public List<Bill> Bills { get; private set; }
+        public List<Bill> Bills { get; set; }
 
         public void LoadBillsByUserId(int userId)
         {
