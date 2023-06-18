@@ -21,7 +21,7 @@
                 <DataGridTextColumn Header="Username" Binding="{Binding Username}"/>
                 <DataGridTextColumn Header="Balance" Binding="{Binding Balance}"/>
                 <DataGridTextColumn Header="Transactions" Binding="{Binding Transaction_count}"/>
-                <DataGridCheckBoxColumn Header="Role" Binding="{Binding Role}"/>
+                <DataGridTextColumn Header="Role" Binding="{Binding Role}"/>
             </DataGrid.Columns>
         </DataGrid>
         <TextBlock Text="Role" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" Margin="100,80,0,0"/>
