@@ -10,7 +10,6 @@
         <Menu VerticalAlignment="Top" >
             <MenuItem Header="Users" Click="UserClick"></MenuItem>
             <MenuItem Header="Bills" Click="BillClick"></MenuItem>
-            <MenuItem Header="Transactions" Click="TransactionClick"></MenuItem>
             <MenuItem Header="Balance" Click="BalanceClick"></MenuItem>
             <MenuItem Header="Log Out" Click="LogOutClick"></MenuItem>
         </Menu>

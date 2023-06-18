@@ -27,12 +27,6 @@ namespace TransactionSystem.Views
             AdminAction.Content = adminUserView;
         }
 
-        private void TransactionClick(object sender, RoutedEventArgs e)
-        {
-            AdminTransView transView = new AdminTransView();
-            AdminAction.Content = transView;
-        }
-
         private void BillClick(object sender, RoutedEventArgs e)
         {
             AdminBillView billView = new AdminBillView();

@@ -76,9 +76,6 @@
     <Compile Include="Views\AdminBillView.xaml.cs">
       <DependentUpon>AdminBillView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminTransView.xaml.cs">
-      <DependentUpon>AdminTransView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\AdminUserView.xaml.cs">
       <DependentUpon>AdminUserView.xaml</DependentUpon>
     </Compile>
@@ -139,10 +136,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AdminBillView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\AdminTransView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

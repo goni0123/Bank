@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Goni_\OneDrive\Documents\GitHub\Bank\TransactionSystem\App.xaml
-12-1168431236
+11-1392690226
 
-26-1497861504
+25693801366
 151077514319
-Views\AdminBalanceView.xaml;Views\AdminBillView.xaml;Views\AdminTransView.xaml;Views\AdminUserView.xaml;Views\AdminView.xaml;Views\LoginView.xaml;Views\MainView.xaml;Views\SignupView.xaml;Views\UserBalanceView.xaml;Views\UserBillView.xaml;Views\UserSendView.xaml;Views\UserView.xaml;
+Views\AdminBalanceView.xaml;Views\AdminBillView.xaml;Views\AdminUserView.xaml;Views\AdminView.xaml;Views\LoginView.xaml;Views\MainView.xaml;Views\SignupView.xaml;Views\UserBalanceView.xaml;Views\UserBillView.xaml;Views\UserSendView.xaml;Views\UserView.xaml;
 
-True
+False
 

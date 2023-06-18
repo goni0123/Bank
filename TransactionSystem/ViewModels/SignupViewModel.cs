@@ -10,7 +10,7 @@ namespace TransactionSystem.ViewModels
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
 
-        private byte[] HashPassword(string password, byte[] salt)
+        public byte[] HashPassword(string password, byte[] salt)
         {
             using (var sha256 = SHA256.Create())
             {
@@ -24,7 +24,7 @@ namespace TransactionSystem.ViewModels
             }
         }
 
-        private bool VerifyPassword(string password, string encryptedPassword, byte[] salt)
+        public bool VerifyPassword(string password, string encryptedPassword, byte[] salt)
         {
             byte[] hashedPasswordBytes = HashPassword(password, salt);
             string hashedPassword = Convert.ToBase64String(hashedPasswordBytes);
@@ -61,7 +61,7 @@ namespace TransactionSystem.ViewModels
             }
         }
 
-        private bool CheckUserExists(string username)
+        public bool CheckUserExists(string username)
         {
             string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
 
@@ -79,7 +79,7 @@ namespace TransactionSystem.ViewModels
             }
         }
 
-        private byte[] GenerateSalt()
+        public byte[] GenerateSalt()
         {
             byte[] salt = new byte[16];
 

@@ -7,6 +7,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <TextBlock Text="Username" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" Margin="100,50,0,0"/>
+        <TextBox x:Name="User" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="100" Margin="190,50,0,0"/>
+        <TextBlock Text="Balance" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" Margin="300,50,0,0"/>
+        <TextBox x:Name="Amount" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="100" Margin="390,50,0,0"/>
+        <TextBlock Text="Password" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" Margin="300,80,0,0"/>
+        <TextBox x:Name="Password" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="100" Margin="390,80,0,0"/>
+        <Button x:Name="NewUser" Content="New User" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="100" Margin="510,50,0,0" Click="NewUser_Click"/>
+        <Button x:Name="DeleteUser" Content="Delete User" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="100" Margin="510,80,0,0" Click="DeleteUser_Click"/>
+        <Button x:Name="PasswordChange" Content="New Password" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="100" Margin="510,110,0,0" Click="PasswordChange_Click"/>
+        <DataGrid x:Name="UsersD" Height="200" AutoGenerateColumns="False" Margin="100,144,190,106">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Username" Binding="{Binding Username}"/>
+                <DataGridTextColumn Header="Balance" Binding="{Binding Balance}"/>
+                <DataGridTextColumn Header="Transactions" Binding="{Binding Transaction_count}"/>
+                <DataGridCheckBoxColumn Header="Role" Binding="{Binding Role}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Text="Role" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" Margin="100,80,0,0"/>
+        <TextBox x:Name="Role" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="100" Margin="190,80,0,0"/>
     </Grid>
 </UserControl>
