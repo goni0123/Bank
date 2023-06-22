@@ -69,10 +69,7 @@ namespace TransactionSystem.Views
 
             if (isUserCreated)
             {
-                MainView mainView = Window.GetWindow(this) as MainView;
-                LoginView loginView = new LoginView();
-                mainView.ActionView.Content = loginView;
-                FillUsersDataGrid();
+                MessageBox.Show("Username is created");
             }
             else
             {

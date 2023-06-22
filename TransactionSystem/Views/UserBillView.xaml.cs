@@ -56,7 +56,6 @@ namespace TransactionSystem.Views
                             selectedBill.Status = true;
                             MessageBox.Show("Bill paid successfully.", "Payment Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                            LoadDataGrid();
                         }
                         else
                         {
@@ -73,6 +72,7 @@ namespace TransactionSystem.Views
             {
                 MessageBox.Show("Please select a bill to pay.", "Payment Failed", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            LoadDataGrid();
         }
     }
 }

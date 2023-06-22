@@ -22,7 +22,7 @@ namespace TransactionSystem.Views
             UserSendViewModel userSendViewModel = new UserSendViewModel();
             InitializeComponent();
             connectionString = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
-            userSendViewModel.LoadDataGrid(connectionString, Trans,userId);
+            userSendViewModel.LoadDataGrid(connectionString,Trans,userId);
             userSendViewModel.LoadComboBox(connectionString, ToUser, "Username", "Users");
         }
 
@@ -48,8 +48,8 @@ namespace TransactionSystem.Views
                 {
                     MessageBox.Show(ex.Message);
                 }
-                userSendViewModel.LoadDataGrid(connectionString, Trans,userId);
             }
+            userSendViewModel.LoadDataGrid(connectionString, Trans, userId);
         }
     }
 }
