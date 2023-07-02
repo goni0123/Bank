@@ -96,7 +96,6 @@ namespace TransactionSystem.Views
                 {
                     connection.Open();
 
-                    // Update the bill in the database
                     string query = "UPDATE Bills SET Name = @Name, Amount = @Amount,UserId = @UserId WHERE BillId = @BillId";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {

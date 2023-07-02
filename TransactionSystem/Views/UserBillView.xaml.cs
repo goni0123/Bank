@@ -48,7 +48,7 @@ namespace TransactionSystem.Views
                 {
                     try
                     {
-                        decimal fee = 10.0m; // Set the fee here
+                        decimal fee = 30;
                         bool paymentSuccess = userBillViewModel.PayBill(selectedBill.BillId, fee,userId);
 
                         if (paymentSuccess)

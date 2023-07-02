@@ -65,17 +65,5 @@ namespace TransactionSystem.ViewModels
 
             return string.Equals(hashedPassword, encryptedPassword);
         }
-
-        private byte[] GenerateSalt()
-        {
-            byte[] salt = new byte[16];
-
-            using (var rng = new RNGCryptoServiceProvider())
-            {
-                rng.GetBytes(salt);
-            }
-
-            return salt;
-        }
     }
 }

@@ -17,9 +17,6 @@ using TransactionSystem.ViewModels;
 
 namespace TransactionSystem.Views
 {
-    /// <summary>
-    /// Interaction logic for UserBalanceView.xaml
-    /// </summary>
     public partial class UserBalanceView : UserControl
     {
         private int userId;

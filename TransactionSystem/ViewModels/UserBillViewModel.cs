@@ -61,10 +61,8 @@ namespace TransactionSystem.ViewModels
                 {
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        // Enable MARS in the connection string
                         connection.ConnectionString += ";MultipleActiveResultSets=True";
 
-                        // Get bill information
                         string billQuery = "SELECT Name, Amount, UserId FROM Bills WHERE BillId = @BillId";
                         SqlCommand billCommand = new SqlCommand(billQuery, connection);
                         billCommand.Parameters.AddWithValue("@BillId", billId);
@@ -78,7 +76,6 @@ namespace TransactionSystem.ViewModels
                                 string name = billReader.GetString(0);
                                 decimal amount = billReader.GetDecimal(1);
 
-                                // Get user balance
                                 string balanceQuery = "SELECT Balance FROM Users WHERE Id = @UserId";
                                 SqlCommand balanceCommand = new SqlCommand(balanceQuery, connection);
                                 balanceCommand.Parameters.AddWithValue("@UserId", userId);
@@ -89,18 +86,15 @@ namespace TransactionSystem.ViewModels
                                     {
                                         decimal balance = balanceReader.GetDecimal(0);
 
-                                        // Check if the user has sufficient balance
                                         if (balance >= amount + fee)
                                         {
-                                            // Update user balance
                                             decimal newBalance = balance - amount - fee;
                                             string updateBalanceQuery = "UPDATE Users SET Balance = @NewBalance WHERE Id = @UserId";
                                             SqlCommand updateBalanceCommand = new SqlCommand(updateBalanceQuery, connection);
                                             updateBalanceCommand.Parameters.AddWithValue("@NewBalance", newBalance);
                                             updateBalanceCommand.Parameters.AddWithValue("@UserId", userId);
                                             updateBalanceCommand.ExecuteNonQuery();
-
-                                            // Update bill status
+                                            
                                             string updateStatusQuery = "UPDATE Bills SET Status = 1 WHERE BillId = @BillId";
                                             SqlCommand updateStatusCommand = new SqlCommand(updateStatusQuery, connection);
                                             updateStatusCommand.Parameters.AddWithValue("@BillId", billId);
@@ -116,7 +110,7 @@ namespace TransactionSystem.ViewModels
                         }
                     }
 
-                    scope.Complete(); // Commit the transaction
+                    scope.Complete(); 
                     return true;
                 }
             }

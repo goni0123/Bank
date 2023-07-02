@@ -128,7 +128,6 @@ namespace TransactionSystem.ViewModels
 
         public void ExecuteTransaction(string connectionString, int senderAccountId, int receiverAccountId, decimal amount, decimal fee)
         {
-            // Check if the sender has sufficient funds
             if (!HasSufficientFunds(connectionString, senderAccountId, amount, fee))
             {
                 throw new Exception("Insufficient funds in the sender's account.");

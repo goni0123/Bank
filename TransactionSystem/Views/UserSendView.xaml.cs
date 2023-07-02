@@ -9,9 +9,6 @@ using static TransactionSystem.ViewModels.UserSendViewModel;
 
 namespace TransactionSystem.Views
 {
-    /// <summary>
-    /// Interaction logic for UserSendView.xaml
-    /// </summary>
     public partial class UserSendView : UserControl
     {
         public int userId;

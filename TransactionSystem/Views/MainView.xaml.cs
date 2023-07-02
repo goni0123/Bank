@@ -51,7 +51,6 @@ namespace TransactionSystem.Views
 
         private void UserView_LogoutRequested(object sender, EventArgs e)
         {
-            // Perform logout actions
             AuthenticatedUserId = 0;
             AuthenticatedUserRole = null;
             ShowLoginView();

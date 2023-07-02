@@ -19,9 +19,6 @@ using TransactionSystem.ViewModels;
 
 namespace TransactionSystem.Views
 {
-    /// <summary>
-    /// Interaction logic for AdminUserView.xaml
-    /// </summary>
     public partial class AdminUserView : UserControl
     {
         private string connectionString;
